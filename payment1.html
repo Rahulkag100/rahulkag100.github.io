@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/styles.css">
+<!-- animate CSS -->
+<link rel="stylesheet" href="css/animate.css">
+<!-- google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+<!-- FontAwsome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- JQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<title>NR Travels | Payment</title>
+</head>
+<body>
+    <div class="nav-container">
+        <nav class="navbar navbar-expand-lg bg-dark" id="mainNav">
+          <div class="container">
+            <a class="navbar-brand" href="index.html">NR Travels</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Destinations</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">CountDown</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Blogs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Clients</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    
+    <!-- form -->
+	<div class="container-fluid" style="background: url('./images/pattern1.png');"><br>
+		<div class="col-lg-6 m-auto d-block">
+			
+            <form action="./thankyou.html" onsubmit="return validation1()" class="bg-light" class="payment" method="GET">
+                    <div class="card-header">
+                            <div class="row">
+                               <h3 class="xs-only-text-center">Payment Details</h3>
+                                <img class="img-fluid cc-img"
+                                    src="http://www.prepbootstrap.com/Content/images/shared/misc/creditcardicons.png">
+                            </div>
+                        </div>
+				<div class="form-group">
+					<label for="user" class="font-weight-bold"><strong>CARD OWNER</strong></label>
+					<input type="text" name="user" class="form-control" id="user1" autocomplete="off">
+					<span id="username1" class="text-danger font-weight-bold"> </span>
+                </div>
+                
+				<div class="form-group">
+					<label for="user" class="font-weight-bold"><strong>CARD NUMBER</strong></label>
+					<input type="text" name="user" class="form-control" id="cardnum" autocomplete="off">
+					<span id="cardnum1" class="text-danger font-weight-bold"> </span>
+                </div>
+                
+                <div class="form-group">
+					<label class="font-weight-bold"><strong>CVV</strong></label>
+					<input type="text" name="conpass" class="form-control" id="cvv" autocomplete="off">
+					<span id="cvv1" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group">
+					<label class="font-weight-bold"><strong>EXPIRATION</strong></label><br>
+                    <select id="exp">
+                            <option value="">Month</option>
+                            <option value="01">January</option>
+                            <option value="02">February </option>
+                            <option value="03">March</option>
+                            <option value="04">April</option>
+                            <option value="05">May</option>
+                            <option value="06">June</option>
+                            <option value="07">July</option>
+                            <option value="08">August</option>
+                            <option value="09">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                    </select>
+                    <select id="exp">
+                        <option value="">Year</option>
+                        <option value="16"> 2019</option>
+                        <option value="17"> 2020</option>
+                        <option value="18"> 2021</option>
+                        <option value="19"> 2022</option>
+                        <option value="20"> 2023</option>
+                        <option value="21"> 2024</option>
+                    </select>
+                    <span id="exp1" class="text-danger font-weight-bold"> </span>
+				</div>
+
+               <a href="thankyou.html"><input type="submit" name="submit" value="submit" class="btn btn-success" autocomplete="off" onsubmit=""></a>
+               
+
+			</form><br><br>
+
+
+		</div>
+	</div>
+	<script type="text/javascript">
+		
+
+		function validation1(){
+
+			var user = document.getElementById('user1').value;
+			var cardNum = document.getElementById('cardnum').value;
+            var Cvv = document.getElementById('cvv').value;
+            var expiration = document.getElementById('exp').value;
+
+
+			if(user == ""){
+				document.getElementById('username1').innerHTML =" ** Please fill the card Owner  field";
+				return false;
+			}
+			if((user.length <= 2) || (user.length > 20)) {
+				document.getElementById('username1').innerHTML =" ** Username lenght must be between 2 and 20";
+				return false;	
+			}
+			if(!isNaN(user)){
+				document.getElementById('username1').innerHTML =" ** only characters are allowed";
+				return false;
+            }
+            
+            if(cardNum == "")
+            {
+				document.getElementById('cardnum1').innerHTML =" ** Please fill the card Number field";
+				return false;
+			}
+			if(isNaN(cardNum)){
+				document.getElementById('cardnum1').innerHTML =" ** user must write digits only not characters";
+				return false;
+			}
+            if(cardNum.length!=16)
+            {
+				document.getElementById('cardnum1').innerHTML =" ** card Number must be 16 digits only";
+				return false;
+			}
+
+
+            if(Cvv == "")
+            {
+				document.getElementById('cvv1').innerHTML =" ** Please fill the CVV Number field";
+				return false;
+			}
+			if(isNaN(Cvv)){
+				document.getElementById('cvv1').innerHTML =" ** user must write digits only not characters";
+				return false;
+			}
+            if(Cvv.length!=3)
+            {
+				document.getElementById('cvv1').innerHTML =" ** CVV must be 3 digits only";
+				return false;
+            }
+            
+            if(expiration == "")
+            {
+                document.getElementById('exp1').innerHTML =" ** Please fill the expiration date field";
+				return false;
+            }
+            
+
+		}
+
+    </script>
+    <!-- footer section -->
+    <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12 logo">
+                        <div class="logo-p">
+                            <h1>LOGO</h1>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quasi ipsum dolorum sint
+                            maiores quo omnis.</p>
+                        <p><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; Location</p>
+                        <p><i class="fa fa-phone" aria-hidden="true"></i>&nbsp; (+91)-98765 45751</p>
+                        <p><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp; nrtravels@gmail.com</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12 BrowseTours">
+                        <div class="browse-p">
+                            <h3>Browse Tour</h3>
+                        </div>
+                        <div class="links-items">
+                            <a href="#" class=" p-5">Tourse</a><br>
+                            <a href="#" class=" p-5">Packages</a><br>
+                            <a href="#" class=" p-5">Deals</a><br>
+                            <a href="#" class=" p-5">Offers</a><br>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12 recent-post">
+                        <div class="recent-p">
+                            <h3>Recent Posts</h3>
+                        </div>
+                        <div class="posts-content">
+                            <img src="./images/bucket1.jpg" alt="" class="img-fluid"><br><br>
+                            <h6>A trip to heaven</h6>
+                            <p>June 17,2019</p>
+                        </div>
+                        <div class="posts-content">
+                            <img src="./images/bucket2.jpg" alt="" class="img-fluid"><br><br>
+                            <h6>A trip to heaven</h6>
+                            <p>June 17,2019</p>
+                        </div>
+                        <!-- <div class="posts-content">
+                            <img src="./images/bucket3.jpg" alt="" class="img-fluid">
+                            <h4>A trip to heaven</h4>
+                            <p>June 17,2019</p>
+                        </div> -->
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12 instagram">
+                        <div class="insta-p">
+                            <h3>Instagram</h3>
+                        </div>
+                        <div>
+                            <img src="./images/bucket4.jpg" alt="">
+                            <img src="./images/bucket5.jpg" alt="">
+                            <img src="./images/bucket6.jpg" alt="">
+                            <img src="./images/bucket5.jpg" alt="">
+                            <img src="./images/bucket6.jpg" alt="">
+                            <img src="./images/bucket5.jpg" alt="">
+                            <img src="./images/bucket6.jpg" alt="">
+                            <img src="./images/bucket5.jpg" alt="">
+                            <img src="./images/bucket4.jpg" alt="">
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+        <!-- Custom JS -->
+        <script src="./js/main.js"></script>
+        <!--Popper.js, then Bootstrap JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+</body>
+</html>

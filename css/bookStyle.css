@@ -1,0 +1,42 @@
+/**********************************
+         Universal Styles
+***********************************/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/***********************************
+            bookTabs
+************************************/
+
+.bookTabs .nav-tabs li a{
+    text-decoration: none;
+    color: black;
+    transition: ease all .5s;
+}
+
+.bookTabs table{
+    background: url('../images/lg-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.mainTab li a .active{
+    color: #EB4511;
+}
+
+.mainTab .accordion button {
+    text-decoration: none;
+}
+
+.mainTab .accordion button:hover{
+    color: #EB4511;
+}
+
+.bookTabs table button a{
+    text-decoration: none;
+    color: #ffffff;
+}
